@@ -1,6 +1,6 @@
 ---
 - name: Gather and display system information
-  hosts: servers  # Or use 'localhost' for local machine or your specific group
+  hosts: servers  # this has to be same as in your ini file , check comments.md for more info
   become: yes  # If you need elevated privileges
   tasks:
     - name: Gather system information (facts)

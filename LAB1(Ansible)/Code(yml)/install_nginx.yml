@@ -22,7 +22,7 @@
 
     - name: Deploy custom index.html file
       copy:
-        src: files/custom_index.html  # This path should point to your custom index.html
+        src: files/custom_index.html  # html code for this file and instructions in comments.md , do checkout 
         dest: /var/www/html/index.html
         owner: www-data
         group: www-data
