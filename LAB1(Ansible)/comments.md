@@ -30,9 +30,13 @@ sudo apt-get install sshpass
 
 ## PASSWORD FLAG FOR ANSIBLE COMMAND TO EXECUTE SCRIPT
 
+```bash
+ansible-playbook -i inventory.ini uptime_check.yml -K
+```
 
+- add -K flag here so that password access is on , when asked enter cselab3 
 
-## CREATE DIR FILES , INSIDE CREATE index.html
+## CREATE DIR FILES , INSIDE CREATE custom_index.html
 
 ```bash
 mkdir files
