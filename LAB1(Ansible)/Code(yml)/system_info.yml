@@ -1,0 +1,16 @@
+---
+- name: Gather and display system information
+  hosts: servers  # Or use 'localhost' for local machine or your specific group
+  become: yes  # If you need elevated privileges
+  tasks:
+    - name: Gather system information (facts)
+      ansible.builtin.setup:
+
+    - name: Display system information
+      ansible.builtin.debug:
+        msg:
+          - "Hostname: {{ ansible_hostname }}"
+          - "OS: {{ ansible_os_family }} {{ ansible_distribution }} {{ ansible_distribution_version }}"
+          - "Kernel: {{ ansible_kernel }}"
+          - "CPU: {{ ansible_processor[0] }}"
+          - "Total Memory: {{ ansible_memtotal_mb }} MB"
