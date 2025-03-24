@@ -53,7 +53,7 @@ remoteip ansible_user=user(before @ in ubuntu terminal)
 - make playbook
   
 ```bash
-- nano playbook.yml
+ nano playbook.yml
 ```
 - paste this there
   
