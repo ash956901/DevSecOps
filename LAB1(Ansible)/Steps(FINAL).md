@@ -18,7 +18,7 @@ remote_ip ansible_user=remote_user
 nano ansible.yml
 ```
 
--ansible.yml file
+- ansible.yml file
 
 ```yml
 - name: Jai mata di
