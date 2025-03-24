@@ -36,6 +36,18 @@ ansible-playbook -i inventory.ini uptime_check.yml -K
 
 - add -K flag here so that password access is on , when asked enter cselab3 
 
+## SUDO PASSWORD ERROR
+
+- Use the flag --ask-become-pass while running playbook if u get the following error:
+
+```bash
+fatal: [10.20.9.51]: FAILED! => {"msg": "Missing sudo password"}
+```
+
+```bash
+ansible-playbook -i inventory.ini playbook.yml --ask-become-pass
+```
+
 ## CREATE DIR FILES , INSIDE CREATE custom_index.html
 
 ```bash
