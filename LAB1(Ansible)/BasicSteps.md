@@ -58,7 +58,7 @@ remoteip ansible_user=user(before @ in ubuntu terminal)
 - paste this there
   
 ```yml
--name: Ensure directory and file exist
+- name: Ensure directory and file exist 
   hosts: servers
   become: true
   tasks:
