@@ -87,5 +87,22 @@ remoteip ansible_user=user(before @ in ubuntu terminal)
 ```bash
 ansible-playbook -i inventory.ini playbook.yml --ask-become-pass
 ```
+But after this if you get this error:(By Ankit Singh)
+```bash
+TASK [Gathering Facts] ************************************************************
+fatal: [10.20.19.137]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: bkarthik@10.20.19.137: Permission denied (publickey,password).", "unreachable": true}
+
+PLAY RECAP ************************************************************************
+10.20.19.137               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+```
+
+Then start doing these steps:
+```bash
+ssh-keygen -t rsa
+ssh-copy-id user_name@remoteip
+ssh -v user_name@remoteip
+```
+After this now use the previous ansible run command :)
+You are ready to go.
 
 Enter password of remote machine on being asked
